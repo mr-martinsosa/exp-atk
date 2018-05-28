@@ -1,24 +1,18 @@
-# README
+# EXP ATK Gaming Forum
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### Collaborators
+* (Rachel Bresnner)[https://github.com/rbressner]
+* (Martin Sosa)[https://github.com/mr-martinsosa]
+* (Md adnanul Chowdhury)[https://github.com/adnanulchowdhury]
+* (Yorvin Rosario)[https://github.com/Yorvi]
 
-* Ruby version
 
-* System dependencies
+### Goal
+To collaborate, organize and create an MVP web product using Ruby on Rails for a potential investor within a group setting. Within the project each group member will demonstrate an understanding of HTML, CSS, JS, Ruby on Rails, Team Dynamics and Workplace Simulation.
 
-* Configuration
+### Product
+Our product mainly focuses on the outdated and lack of modern gaming reference website where the dedicated gaming community can use for guidance, walkthroughs, reviews, blogs, and dedicated game forums. Our fully functional website is built on Ruby on Rails.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 * ...

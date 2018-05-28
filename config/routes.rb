@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   get 'users/index'
   get 'users/show'
   get 'users/edit'
@@ -27,7 +28,7 @@ Rails.application.routes.draw do
   get 'comments/update'
   get 'comments/create'
   get 'comments/new'
-  root to: 'home#index'
+  root "home#index"
   resources :comments
   resources :games
   resources :posts
