@@ -29,7 +29,8 @@ body {
   background-color: #272F37;
   width: 100%;
   border: 1px solid #707070;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   box-shadow: 0 0 15px #191e22;
 }
 
@@ -39,7 +40,7 @@ header {
   background-color: #1F272D; 
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  border-bottom: 1px solid #707070;
+  border: 1px solid #707070;
 }
 
 .third-logo {
@@ -147,10 +148,10 @@ h1 {
   margin: 5px 0 0 10px;
 }
 
-.content {
+div.content {
   margin: 50px 5px 50px 0;
   padding: 30px;
-  width: 700px;
+  width: 60%;
   background-color: #707070;
   display: inline-block;
   border-radius: 20px;
@@ -158,11 +159,11 @@ h1 {
   box-shadow: 0 0 30px #191e22;
 }
 
-.side-bar {
+div.side-bar {
   float: right;
   margin: 50px 0 50px 5px;
   padding: 30px;
-  width: 320px;
+  width: 28%;
   background-color: #707070;
   display: inline-block;
   border-radius: 20px;
