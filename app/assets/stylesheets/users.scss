@@ -29,7 +29,8 @@ body {
   background-color: #272F37;
   width: 100%;
   border: 1px solid #707070;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   box-shadow: 0 0 15px #191e22;
 }
 header {
@@ -53,8 +54,8 @@ header {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 5%;
+  padding-left: 5%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -82,7 +83,7 @@ header {
   background-color: #1F272D;
 }
 
-div .logo {
+div.logo {
   width: 100px;
   height: 86px;
   float: left;
@@ -200,7 +201,7 @@ img.avatar {
   margin: 0 0 0 15px;
   padding: 0 20px;
   height: 300px;
-  width: 775px;
+  width: 66%;
   border-radius: 20px;
   background-color: #707070;
   border: 10px solid #707070;
@@ -212,7 +213,7 @@ img.avatar {
 .content {
   margin: 50px 5px 50px 0;
   padding: 30px;
-  width: 775px;
+  width: 66%;
   background-color: #707070;
   display: inline-block;
   border-radius: 20px;

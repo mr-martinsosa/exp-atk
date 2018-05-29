@@ -1,22 +1,6 @@
   <div class="main">
-    <header class="topnav">
-      <div class="third-logo logo">EK</div>
-      <%= link_to "Home", root_path, :class => "tab active" %>
-      <%= link_to "Profile", users_path, :class => "tab" %>
-      <%= link_to "Games", root_path, :class => "tab" %>
-      <div class="search-container">
-      <%= link_to "Sign In / Sign Up", root_path, :class => "tab" %>
-        <form action="/action_page.php">
-          <button type="submit">
-            <i class="search-icon" data-feather="search"></i>
-          </button>
-          <input type="text" placeholder="Search.." name="search">
-        </form>
-      </div>
-    </header>
 
-    <%= video_tag("final_5b09881a304cef0014d7ba44.mp4", height: '500', width: '100%', autoplay: :autoplay,
-loop: :loop,) %>
+    <%= video_tag("final_5b09881a304cef0014d7ba44.mp4", height: '500', width: '100%', autoplay: :autoplay,loop: :loop,) %>
 
     <br>
     <div class="container">
