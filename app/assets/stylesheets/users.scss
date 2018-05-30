@@ -276,7 +276,7 @@ li {
   margin: 0;
   width: 99.8%;
   border-radius: 20px; 
-  background-color: #272F37;
+  background-color: #1F272D;
   border: 1px solid #707070;
 }
 
@@ -287,26 +287,47 @@ div.center {
 .input {
   border-radius: 10px;
   height: 30px;
-  width: 77%;
+  width: 75%;
+  color: #FF6200;
+  background-color: #272F37;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #707070;
+  letter-spacing: 3px;
 }
 .fname {
   border-radius: 10px;
   height: 30px;
-  width: 98%;
+  width: 96%;
+  color: #FF6200;
+  background-color: #272F37;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #707070;
+  letter-spacing: 3px;
 }
 .lname {
   border-radius: 10px;
   height: 30px;
-  width: 98%;
+  width: 97%;
+  color: #FF6200;
+  background-color: #272F37;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #707070;
+  letter-spacing: 3px;
 }
 .fnames {
-  margin-left: 11%;
+  margin-left: 10.5%;
   float: left;
   margin-bottom: 10px;
   width: 35%;
 }
 .lnames {
-  margin-right: 11.5%;
+  margin-right: 13.5%;
   float: right;
   margin-bottom: 10px;
   width: 35%;
@@ -315,6 +336,7 @@ div.center {
 .btn-links {
   height: 50px;
   width: 100%;
+  margin-bottom: 10%; 
 }
 
 .btn {
@@ -332,11 +354,12 @@ div.center {
   font-family: 'Open Sans Condensed', sans-serif;
   float: left;
   margin-left: 11%;
+  cursor: pointer;
 }
-.btn {
+.btn2 {
   margin-top: 3%;
-  width: 20%;
-  background-color: #FF6200;
+  width: 15%;
+  background-color: #413661;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -347,4 +370,5 @@ div.center {
   border-radius: 10px;
   font-family: 'Open Sans Condensed', sans-serif;
   float: right;
+  margin-right: 11.5%;
 }

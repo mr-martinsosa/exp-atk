@@ -6,14 +6,16 @@
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
+        <br>
+
           <div class="field fnames">
             <%= f.label :first_name %><br />
-            <%= f.text_field :name, autocomplete: "first name", :class => "fname" %>
+            <%= f.text_field :first_name, autocomplete: "first name", :class => "fname" %>
           </div>
 
           <div class="field lnames">
             <%= f.label :last_name %><br />
-            <%= f.text_field :name, autocomplete: "last name", :class => "lname" %>
+            <%= f.text_field :last_name, autocomplete: "last name", :class => "lname" %>
           </div>
           <br><br><br>
 
@@ -26,6 +28,7 @@
             <%= f.label :email %><br />
             <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "input" %>
           </div>
+          <br>
 
           <div class="field">
             <%= f.label :username %><br />
@@ -49,8 +52,11 @@
             <div class="actions">
               <%= f.submit "Sign up", :class => "btn" %>
             </div>
-            <%= render "devise/shared/links", :class => "btn2" %>
+            <div>
+              <a class="btn2" href="/users/sign_in">Sign in</a>
+            </div>
           </div>
+          
 
           
         <% end %>
