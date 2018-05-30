@@ -16,7 +16,7 @@
 
 body {
   height: 100%;
-  margin: 63px !important;
+  margin: 5%;
   font-family: 'Open Sans Condensed', sans-serif;
   color: white;
   background-image:
@@ -60,23 +60,23 @@ header {
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
+// @media (min-width: 768px) {
+//   .container {
+//     width: 750px;
+//   }
+// }
 
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
+// @media (min-width: 992px) {
+//   .container {
+//     width: 970px;
+//   }
+// }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+// @media (min-width: 1200px) {
+//   .container {
+//     width: 1170px;
+//   }
+// }
 
 .topnav {
   overflow: hidden;
@@ -84,12 +84,12 @@ header {
 }
 
 div.logo {
-  width: 100px;
+  width: 6.3%;
   height: 86px;
   float: left;
-  margin-right: 20px;
+  margin-right: 3%;
   padding: 10px 10px 0 20px;
-  font-size: 75px;
+  font-size: 470%;
   letter-spacing: -4px;
 }
 
@@ -98,10 +98,10 @@ div.logo {
   color: #f2f2f2;
   text-align: center;
   height: 50px;
-  width: 90px;
+  width: 6%;
   text-decoration: none;
-  padding: 25px 15px 0;
-  font-size: 17px;
+  padding: 25px 5px 0;
+  font-size: 135%;
   border-top: 5px solid #1F272D;
   border-bottom: 5px solid #1F272D;
 }
@@ -123,20 +123,20 @@ div.logo {
 
 .search-container {
   float: right;
-  padding: 0px 15px 0;
-  border-radius: 20px;
-  width: 450px;
+  padding: 0 1% 0;
+  border-radius: 5%;
+  width: 40%;
   display: inline-block;
 }
 
 .search-container a {
-  width: 120px;
+  width: 35%;
   margin-right: 20px;
 }
 
 .search-container a:hover {
-  width: 120px;
-  margin-right: 20px;
+  width: 35%;
+  margin-right: 35px;
 }
 
 .search-container form {
@@ -147,6 +147,7 @@ div.logo {
 .topnav input[type=text] {
   padding: 6px 6px 6px 20px;
   margin-top: 8px;
+  margin-left: 5px;
   font-size: 17px;
   border: none;
   border-top-left-radius: 10px;
