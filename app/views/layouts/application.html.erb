@@ -13,6 +13,42 @@
   </head>
 
   <body>
+  <% if signed_in? %>
+    <header class="topnav">
+    <div class="third-logo logo">EK</div>
+    <%= link_to "Home", root_path, :class => "tab" %>
+    <%= link_to "Profile", current_user, :class => "tab" %>
+    <%= link_to "Games", root_path, :class => "tab" %>
+    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "tab" %>
+    <div class="search-container">
+    <strong class="current-user"><%= current_user.email %></strong>
+      <form action="/action_page.php">
+        <button type="submit">
+          <i class="search-icon" data-feather="search"></i>
+        </button>
+        <input type="text" placeholder="Search.." name="search">
+      </form>
+    </div>
+  </header>   
+    
+  <% else %>
+    <header class="topnav">
+    <div class="third-logo logo">EK</div>
+    <%= link_to "Home", root_path, :class => "tab" %>
+    <%= link_to "Profile", users_path, :class => "tab" %>
+    <%= link_to "Games", root_path, :class => "tab" %>
+    <div class="search-container">
+    <%= link_to "Sign In / Sign Up", root_path, :class => "tab" %>
+      <form action="/action_page.php">
+        <button type="submit">
+          <i class="search-icon" data-feather="search"></i>
+        </button>
+        <input type="text" placeholder="Search.." name="search">
+      </form>
+    </div>
+  </header>
+    
+  <% end %>
     <%= yield %>
   <script>
     feather.replace()
