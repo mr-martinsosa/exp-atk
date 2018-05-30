@@ -42,6 +42,10 @@ header {
   border-bottom: 1px solid #707070;
 }
 
+.square-logo {
+  text-decoration: none;
+}
+
 .third-logo {
   font-family: 'font3', cursive;
   color: #413661;
@@ -88,7 +92,7 @@ div.logo {
   height: 86px;
   float: left;
   margin-right: 3%;
-  padding: 10px 10px 0 20px;
+  padding: 1% 1% 0 1.5%;
   font-size: 470%;
   letter-spacing: -4px;
 }
@@ -98,10 +102,10 @@ div.logo {
   color: #f2f2f2;
   text-align: center;
   height: 50px;
-  width: 6%;
+  width: 9%;
   text-decoration: none;
-  padding: 25px 5px 0;
-  font-size: 135%;
+  padding: 1.9% 0.1% 0;
+  font-size: 140%;
   border-top: 5px solid #1F272D;
   border-bottom: 5px solid #1F272D;
 }
@@ -123,20 +127,25 @@ div.logo {
 
 .search-container {
   float: right;
-  padding: 0 1% 0;
+  padding: 0 0;
   border-radius: 5%;
-  width: 40%;
+  width: 30%;
   display: inline-block;
 }
 
 .search-container a {
-  width: 35%;
+  width: 120px;
   margin-right: 20px;
 }
 
+.signin_out {
+  color: white;
+  text-decoration: none;
+}
+
 .search-container a:hover {
-  width: 35%;
-  margin-right: 35px;
+  width: 120px;
+  margin-right: 20px;
 }
 
 .search-container form {
@@ -147,7 +156,6 @@ div.logo {
 .topnav input[type=text] {
   padding: 6px 6px 6px 20px;
   margin-top: 8px;
-  margin-left: 5px;
   font-size: 17px;
   border: none;
   border-top-left-radius: 10px;
