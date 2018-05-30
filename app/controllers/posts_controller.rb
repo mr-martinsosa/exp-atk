@@ -17,9 +17,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(post_params)
+    @post = Post.new(post_params)
 
-    if post.save
+    if @post.save
       flash[:info] = "post submitted"
       redirect_to post_path(post.id)
     else

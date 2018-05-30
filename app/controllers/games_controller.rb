@@ -15,13 +15,13 @@ class GamesController < ApplicationController
   end
 
   def update
-    game = Game.find(params[:id])
+    @game = Game.find(params[:id])
   end
 
   def create
-    game = Game.new(game_params)
+    @game = Game.new(game_params)
 
-    if game.save
+    if @game.save
       flash[:info] = "successful"
       redirect_to game_path(game.id)
     else
