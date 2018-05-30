@@ -262,3 +262,113 @@ li {
   text-decoration: none;
   list-style: none;
 }
+
+
+.form {
+  width: 50%;
+  padding: 10px 0;
+  border-radius: 20px; 
+  background-color: #707070;
+  margin-bottom: 75px;
+}
+.innerform {
+  padding: 0;
+  margin: 0;
+  width: 99.8%;
+  border-radius: 20px; 
+  background-color: #1F272D;
+  border: 1px solid #707070;
+}
+
+div.center {
+  text-align: center;
+}
+
+.input {
+  border-radius: 10px;
+  height: 30px;
+  width: 75%;
+  color: #FF6200;
+  background-color: #272F37;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #707070;
+  letter-spacing: 3px;
+}
+.fname {
+  border-radius: 10px;
+  height: 30px;
+  width: 96%;
+  color: #FF6200;
+  background-color: #272F37;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #707070;
+  letter-spacing: 3px;
+}
+.lname {
+  border-radius: 10px;
+  height: 30px;
+  width: 97%;
+  color: #FF6200;
+  background-color: #272F37;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #707070;
+  letter-spacing: 3px;
+}
+.fnames {
+  margin-left: 10.5%;
+  float: left;
+  margin-bottom: 10px;
+  width: 35%;
+}
+.lnames {
+  margin-right: 13.5%;
+  float: right;
+  margin-bottom: 10px;
+  width: 35%;
+}
+
+.btn-links {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10%; 
+}
+
+.btn {
+  margin-top: 3%;
+  width: 50%;
+  background-color: #FF6200;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  float: left;
+  margin-left: 11%;
+  cursor: pointer;
+}
+.btn2 {
+  margin-top: 3%;
+  width: 15%;
+  background-color: #413661;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  float: right;
+  margin-right: 11.5%;
+}
