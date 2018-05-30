@@ -33,7 +33,7 @@
     
   <% else %>
     <header class="topnav">
-    <div class="third-logo logo">EK</div>
+    <div class="third-logo logo"><%= link_to "EK", root_path, :class => "square-logo" %></div>
     <%= link_to "Home", root_path, :class => "tab" %>
     <%= link_to "Profile", users_path, :class => "tab" %>
     <%= link_to "Games", root_path, :class => "tab" %>

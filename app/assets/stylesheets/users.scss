@@ -106,14 +106,14 @@ div.logo {
   border-bottom: 5px solid #1F272D;
 }
 
-.topnav a:hover {
+.topnav .tab:hover {
   border-top: 5px solid #9A6EAA;
   border-bottom: 5px solid #9A6EAA;
   color: #9A6EAA;
   margin: 0;
 }
 
-.topnav a.active {
+.topnav .tab.active {
   border-top: 5px solid #FF6200;
   border-bottom: 5px solid #FF6200;
   color: #FF6200;
