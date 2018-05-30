@@ -15,15 +15,13 @@
 
           <div class="content">
 
-            <% 5.times do %>
+            <% @user.posts.each do |post| %>
               <div class="posts">
                 <div class="post">
                   <img class="mini-avatar" src="http://via.placeholder.com/50x50">
-                  <span><b>User Post Title</b></span><br>
-                  <span><em>User</em></span>
-                  <p>Post Content - Lorem ipsum dolor sit amet, modo unum minim his at. Sit perfecto mediocritatem ad, ut graeco cetero ullamcorper pro, referrentur
-                  theophrastus sed ad. Exerci mentitum ei duo. Qui ex utinam consequat. Periculis definitionem et per. Eu solum clita indoctum
-                  pri, ius illud erroribus consequat ex, vis nibh habemus cu.</p>
+                  <span><b><%= user.post.title %></b></span><br>
+                  <span><em><%=user.username %></em></span>
+                  <p><%= user.post.content %></p>
                 </div>
               </div>
             <% end %>
