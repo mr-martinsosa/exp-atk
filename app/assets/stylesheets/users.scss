@@ -262,3 +262,89 @@ li {
   text-decoration: none;
   list-style: none;
 }
+
+
+.form {
+  width: 50%;
+  padding: 10px 0;
+  border-radius: 20px; 
+  background-color: #707070;
+  margin-bottom: 75px;
+}
+.innerform {
+  padding: 0;
+  margin: 0;
+  width: 99.8%;
+  border-radius: 20px; 
+  background-color: #272F37;
+  border: 1px solid #707070;
+}
+
+div.center {
+  text-align: center;
+}
+
+.input {
+  border-radius: 10px;
+  height: 30px;
+  width: 77%;
+}
+.fname {
+  border-radius: 10px;
+  height: 30px;
+  width: 98%;
+}
+.lname {
+  border-radius: 10px;
+  height: 30px;
+  width: 98%;
+}
+.fnames {
+  margin-left: 11%;
+  float: left;
+  margin-bottom: 10px;
+  width: 35%;
+}
+.lnames {
+  margin-right: 11.5%;
+  float: right;
+  margin-bottom: 10px;
+  width: 35%;
+}
+
+.btn-links {
+  height: 50px;
+  width: 100%;
+}
+
+.btn {
+  margin-top: 3%;
+  width: 50%;
+  background-color: #FF6200;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  float: left;
+  margin-left: 11%;
+}
+.btn {
+  margin-top: 3%;
+  width: 20%;
+  background-color: #FF6200;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  float: right;
+}
