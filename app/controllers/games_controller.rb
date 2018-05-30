@@ -4,7 +4,9 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(params[:id])
+    # @game = Game.find(params[:id])
+    client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
+    @games = client.get_games({name: ["Super Mario Odyssey","Bravely Default"]}).data
   end
 
   def edit

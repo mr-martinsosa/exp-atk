@@ -1,2 +1,9 @@
 <h1>Games#show</h1>
 <p>Find me in app/views/games/show.html.erb</p>
+
+<% @games.each do |game| %>
+   <%= game.name %> 
+   <br/>
+   <img src = <%= game.box_art_url.gsub("-{width}x{height}","") %>  />
+   <br/>
+<% end %>
