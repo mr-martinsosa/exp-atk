@@ -66,3 +66,6 @@ gem 'devise'
 
 # gem to use gravitar avatars
 gem 'gravtastic'
+
+# gem to grab game and box art from twitch
+gem 'twitch-api'
