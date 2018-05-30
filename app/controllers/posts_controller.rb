@@ -18,19 +18,20 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @user = current_user
 
-    if @post.save
-      flash[:info] = "post submitted"
-      redirect_to post_path(post.id)
-    else
-      flash[:error] = "something went wrong"
-      redirect_to new_post_path
-    end
+    # if @post.save
+    #   flash[:info] = "post submitted"
+    #   redirect_to post_path(post.id)
+    # else
+    #   flash[:error] = "something went wrong"
+    #   redirect_to new_post_path
+    # end
   end
 
   def new
     @post = Post.new
-    @users = User.all
+    @user = current_user
   end
 
   private
