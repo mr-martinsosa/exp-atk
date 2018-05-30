@@ -14,6 +14,11 @@
   src: url('fonts/Quantum.otf')
 }
 
+.current-user {
+    float: left;
+    margin: 32px 0
+}
+
 body {
   height: 100%;
   margin: 63px !important;
@@ -270,6 +275,7 @@ div .logo {
 .search-container form {
   padding: 17px 0 0 0;
   display: inline-block;
+  float: right;
 }
 
 .topnav input[type=text] {
