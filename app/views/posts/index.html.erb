@@ -4,7 +4,7 @@
 <% @posts.each do |post| %>
     <li>
         <strong><%= post.title %></strong><br />
-        <em><%= post.user.name %></em><br />
+        <em><%= post.user.username %></em><br />
         <%= post.content %><br />
 
         <%= link_to "Edit", edit_post_path(post.id) %>
