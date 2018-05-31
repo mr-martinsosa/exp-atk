@@ -1,12 +1,12 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    # @game = Game.all
+    client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
+    @games = client.get_games({name: ["Super Mario Odyssey","Fortnite","Naruto Shippuden: Ultimate Ninja Storm 4","Destiny 2"]}).data
   end
 
   def show
     # @game = Game.find(params[:id])
-    client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
-    @games = client.get_games({name: ["Super Mario Odyssey","Fortnite"]}).data
   end
 
   def edit

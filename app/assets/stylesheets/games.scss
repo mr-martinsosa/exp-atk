@@ -18,3 +18,49 @@
   margin: 10px;
 }
 
+.game {
+  width: 20%;
+  border: 10px solid #707070;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 5px;
+}
+.games {
+  width: 100%;
+  display: inline-block;
+  float: left;
+  margin: 10px;
+}
+
+.jumbotron {
+  border: 10px solid #707070;
+  border-radius: 20px;
+  display: inline-block;
+  margin-left: 15%; 
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px #191e22;
+}
+
+.gal {
+  display: inline-block;
+  padding-bottom: 40px;
+}
+
+.pic {
+  display: inline-block;
+  
+}
+
+.game-pic {
+  width: 15em;
+  border: 10px solid #707070;
+  border-radius: 20px;
+  float: left;
+  margin: 10px;
+  box-shadow: 0 0 10px #191e22;
+}
+
+.game-title {
+  width: 100%;
+  text-align: center;
+}

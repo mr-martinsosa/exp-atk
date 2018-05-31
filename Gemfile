@@ -69,3 +69,6 @@ gem 'gravtastic'
 
 # gem to grab game and box art from twitch
 gem 'twitch-api'
+
+# gem to turn things into markdown
+gem 'redcarpet'
