@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
   end
 
   def show
