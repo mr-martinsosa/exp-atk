@@ -1,3 +1,20 @@
 // Place all the styles related to the Games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-img {
+  border: 10px solid #707070;
+  border-radius: 20px;
+  display: inline-block;
+  margin-left: 25%; 
+  margin-bottom: 10px;
+}
+
+.mini-img {
+  border: 10px solid #707070;
+  border-radius: 20px;
+  display: inline-block;
+  float: left;
+  margin: 10px;
+}
+

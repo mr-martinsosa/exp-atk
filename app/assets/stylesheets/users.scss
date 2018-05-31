@@ -115,14 +115,24 @@ div.logo {
   margin-top: 2em;
   display: inline-block;
   text-align: right;
+  color: #FF6200;
+  font-weight: 900;
 }
-
+.online {
+  width: 10px;
+  height: 10px;
+  background-color: greenyellow;
+  border: 1px solid #707070;
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 10px;
+}
 
 .search-container {
   float: right;
   padding: 0;
   border-radius: 5%;
-  width: 40%;
+  width: 42%;
   display: inline-block;
 }
 
