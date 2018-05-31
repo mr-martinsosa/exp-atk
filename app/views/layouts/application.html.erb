@@ -18,11 +18,11 @@
     <div class="third-logo logo">EK</div>
     <%= link_to "Home", root_path, :class => "tab" %>
     <%= link_to "Profile", current_user, :class => "tab" %>
-    <%= link_to "Games", root_path, :class => "tab" %>
+    <%= link_to "Games", games_path, :class => "tab" %>
     <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "tab" %>
     <div class="search-container">
       <div class="current-user">
-        <strong><%= current_user.email %></strong>
+        <strong><div class="online"></div><%= current_user.email %></strong>
       </div>
       <form action="/action_page.php">
         <button type="submit">
