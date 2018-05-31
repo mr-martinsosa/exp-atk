@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
   end
 
   def edit
