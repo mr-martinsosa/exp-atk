@@ -21,7 +21,9 @@
     <%= link_to "Games", root_path, :class => "tab" %>
     <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "tab" %>
     <div class="search-container">
-    <strong class="current-user"><%= current_user.email %></strong>
+      <div class="current-user">
+        <strong><%= current_user.email %></strong>
+      </div>
       <form action="/action_page.php">
         <button type="submit">
           <i class="search-icon" data-feather="search"></i>
@@ -38,7 +40,9 @@
     <%= link_to "Profile", users_path, :class => "tab" %>
     <%= link_to "Games", games_path, :class => "tab" %>
     <div class="search-container">
-    <%= link_to "Sign In / Sign Up", user_session_path, :class => "signin_out" %>
+    <div class="current-user">
+        <%= link_to "Sign In / Sign Up", user_session_path, :class => "signin_out" %>
+    </div>
       <form action="/action_page.php">
         <button type="submit">
           <i class="search-icon" data-feather="search"></i>
