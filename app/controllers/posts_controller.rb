@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
 
     @comments = Comment.all
-    @comment = Comment.new
+    @comment = Comment.new(comment_params)
     @user = User.find_by(params[:id])
   end
 
@@ -36,7 +36,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = Post.new(post_params)
     # @user = current_user
   end
 

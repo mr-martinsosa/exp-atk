@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @comment = Commment.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   def edit
@@ -18,12 +18,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Commment.new(comment_params)
+    @comment = Comment.new(comment_params)
     @user = User.find_by(params[:id])
 
     if @comment.save
       flash[:info] = "Comment was posted successfully"
-      redirect_to posts_path(posts)
+      redirect_to posts_path
     else
       flash[:error] = "something went wrong!"
       redirect_to new_comment_path
@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new
+    @comment = Comment.new(comment_params)
   end
 
   private
