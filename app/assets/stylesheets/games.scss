@@ -53,6 +53,7 @@
 
 .pic {
   display: inline-block;
+  margin: 10px 6px;
 }
 
 .game-pic {
@@ -69,10 +70,10 @@
   text-align: center;
 }
 .search-container2 {
-  float: right;
+  margin-left: 20%;
   padding: 0;
   border-radius: 5%;
-  width: 30%;
+  width: 60%;
   display: inline-block;
 }
 
@@ -101,14 +102,15 @@
 }
 
 .search-container2 form {
-  float: right;
-  padding: 3.2% 0 0 0;
+  // float: right;
+  padding: 0 0 3.2% 0;
   display: inline-block;
+  width: 100%;
 }
 
 .searchy {
-    padding: .4em .4em .336em;
-    margin-top: .48em;
+    padding: .45em .4em .336em;
+    margin-top: .47em;
     font-size: 120%;
     border: none;
     border-top-left-radius: 10px;
@@ -116,10 +118,18 @@
     color: #FF6200;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
+    width: 83.1%
 }
 
-.head {
-  display: inline-block;
+.center-text {
   text-align: center;
-  padding-left: 40%;
+  color: white;
+  font-size: 170%;
+  letter-spacing: 7px;
+  font-family: 'Phosphate Inline', cursive;
+  text-shadow:
+    -1px -1px 0 #FF6200,
+    1px -1px 0 #FF6200,
+    -1px 1px 0 #FF6200,
+    1px 1px 0 #FF6200; 
 }
