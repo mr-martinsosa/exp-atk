@@ -34,14 +34,18 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new(game_params)
+    client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
+    game = client.get_games({name: ["#{params[:name]}"]}).data
+    game.each do |game|
+      @game = Game.create(name: game.name, box_art_url: game.box_art_url)
+    end
 
     if @game.save
       flash[:info] = "successful"
       redirect_to game_path(@game.id)
     else
       flash[:error] = "failed"
-      redirect_to new_game_path
+      redirect_to games_path
     end
   end
 
