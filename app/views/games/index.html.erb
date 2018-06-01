@@ -10,7 +10,7 @@
 
     <div class="search-container2">
       <%= form_for game_result_path do %>
-        <%= text_field_tag :term, params[:name], class: "searchy", placeholder: "Search..."  %>
+        <%= text_field_tag :name, params[:name], class: "searchy", placeholder: "Search..."  %>
         <%= button_tag(type: "submit") do %>
           <i class="search-icon" data-feather="search"></i>
         <% end %>

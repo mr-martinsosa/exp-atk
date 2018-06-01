@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users
 
   get "/games/show/:name" => "games#show", as: "show_game"
-  get "/games/show/results" => "games#result", as: "game_result"
+  get "/games/results" => "games#result", as: "game_result"
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
