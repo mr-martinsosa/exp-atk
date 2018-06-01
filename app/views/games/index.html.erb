@@ -12,8 +12,14 @@
 
     <%= image_tag 'games.jpg', :class => "jumbotron" %>
 
+
+    <h2> TOP GAMES </h2>
+
     <div class="gal">
-      <% @games.each do |game| %>
+      <% @top_games.each do |game| %>
+        <% if game.name == "IRL" || game.name == "Casino" || game.name == "Talk Shows" || game.name == "Creative" %>
+          <% next %>
+        <% end %>
         <div class="pic">
           <img class="game-pic" src= <%= game.box_art_url.gsub("-{width}x{height}","") %> >
           <div class="game-title">
