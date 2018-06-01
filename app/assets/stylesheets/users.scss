@@ -117,6 +117,8 @@ div.logo {
   text-align: right;
   color: #FF6200;
   font-weight: 900;
+  float: right;
+  margin-right: 5%;
 }
 .online {
   width: 10px;
@@ -249,8 +251,20 @@ img.avatar {
   border-radius: 20px;
   text-align: justify;
   margin: 15px;
+  box-shadow: 0 0 10px #FF6200;
 }
 .post {
+  padding: 20px;
+}
+.user-posts {
+  background-color: #1F272D;
+  border: 2px solid #FF6200;
+  border-radius: 20px;
+  text-align: justify;
+  margin: 15px;
+  box-shadow: 0 0 10px #191e22;
+}
+.user-post {
   padding: 20px;
 }
 

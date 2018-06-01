@@ -4,19 +4,31 @@
 
     <%= image_tag 'games.jpg', :class => "jumbotron" %>
 
+    <br><br><br>
 
-    <h2> TOP GAMES </h2>
+    <h2 class="center-text"> SEARCH FOR A GAME </h2>
+
+    <div class="search-container2">
+      <%= form_for games_path do %>
+        <%= text_field_tag :term, params[:term] %>
+        <%= submit_tag 'Search', class: "searchy", name: nil %>
+        <i class="search-icon" data-feather="search"></i>
+      <% end %>
+    </div>
+
+<br><br><br><br>
+    <h2 class="center-text"> TOP GAMES </h2>
 
     <div class="gal">
       <% @top_games.each do |game| %>
-        <% if game.name == "IRL" || game.name == "Casino" || game.name == "Talk Shows" || game.name == "Creative" %>
+        <% if game.name == "IRL" || game.name == "Casino" || game.name == "Talk Shows" || game.name == "Creative" || game.name == "Music" %>
           <% next %>
         <% end %>
         <div class="pic">
-          <img class="game-pic" src= <%= game.box_art_url.gsub("-{width}x{height}","") %> >
           <div class="game-title">
             <%= game.name %>
           </div>
+          <img class="game-pic" src= <%= game.box_art_url.gsub("-{width}x{height}","") %> >
         </div>
       <% end %>
     </div>
