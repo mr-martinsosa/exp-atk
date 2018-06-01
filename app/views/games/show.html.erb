@@ -31,6 +31,14 @@
         </div>
       </div>
     <% end %>
+
+<%= form_with model: @post, local: true do |form| %>
+    <%= form.text_field :title, placeholder: "title" %><br />
+    <%= form.text_area :content, placeholder: "content" %>
+    <%= form.hidden_field :user_id, :value => current_user.id %><br />
+    <%= form.hidden_field :game_id %>
+    <%= form.submit %>
+<% end %>
   </div>
 </div>
 </div>
