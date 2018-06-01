@@ -1,33 +1,21 @@
 <div class="main">
 <div class="container">
   <!-- <h1>GAMES</h1> -->
-  <h2 class="head"> <%= @game.name %> </h1>
-  <div>
-    <img src= <%= @game.box_art_url.gsub("-{width}x{height}","") %> class="main-img">
-  </div>
-<!-- 
-  <div>
-    <img src="http://via.placeholder.com/250x250" class="mini-img">
-  </div>
-  <div>
-    <img src="http://via.placeholder.com/250x250" class="mini-img">
-  </div>
-  <div>
-    <img src="http://via.placeholder.com/250x250" class="mini-img">
-  </div>
-  <div>
-    <img src="http://via.placeholder.com/250x250" class="mini-img">
-  </div>
-  -->
-  
-  <div class="content">
+
+  <% if @game != nil %>
+    <h2 class="head"> <%= @game.name %> </h1>
+    <div>
+      <img src= <%= @game.box_art_url.gsub("-{width}x{height}","") %> class="main-img">
+    </div>
+
+    <div class="content">
     <div class="posts">
       <div class="post">
         <%= form_with model: @post, local: true do |form| %>
           <%= form.text_field :title, placeholder: "title", :class => "post-title" %><br />
           <%= form.text_area :content, placeholder: "content", :class => "post-content" %>
-          <%= form.hidden_field :user_id, :value => current_user.id %><br />
-          <!-- <%= form.hidden_field :game_id %> -->
+          <%#= form.hidden_field :user_id, :value => current_user.id %><br />
+          <!-- <%#= form.hidden_field :game_id %> -->
           <small><em>Powered by Markdown</em></small> <br>
           <%= form.submit "Post", :class => "submit" %>
         <% end %>
@@ -55,6 +43,23 @@
   </div>
 </div>
 </div>
+  <% end %>
+<!-- 
+  <div>
+    <img src="http://via.placeholder.com/250x250" class="mini-img">
+  </div>
+  <div>
+    <img src="http://via.placeholder.com/250x250" class="mini-img">
+  </div>
+  <div>
+    <img src="http://via.placeholder.com/250x250" class="mini-img">
+  </div>
+  <div>
+    <img src="http://via.placeholder.com/250x250" class="mini-img">
+  </div>
+  -->
+  
+  
 
   <footer id="wrapper">
 
