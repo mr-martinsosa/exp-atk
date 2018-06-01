@@ -8,6 +8,7 @@
   display: inline-block;
   margin-left: 25%; 
   margin-bottom: 10px;
+  box-shadow: 0 0 30px #191e22;
 }
 
 .mini-img {
@@ -16,6 +17,7 @@
   display: inline-block;
   float: left;
   margin: 10px;
+  box-shadow: 0 0 30px #191e22;
 }
 
 .game {
@@ -24,12 +26,14 @@
   border-radius: 20px;
   display: inline-block;
   margin: 5px;
+  box-shadow: 0 0 30px #191e22;
 }
 .games {
   width: 100%;
   display: inline-block;
   float: left;
   margin: 10px;
+  box-shadow: 0 0 30px #191e22;
 }
 
 .jumbotron {
@@ -49,7 +53,7 @@
 
 .pic {
   display: inline-block;
-  
+  margin: 10px 6px;
 }
 
 .game-pic {
@@ -64,4 +68,68 @@
 .game-title {
   width: 100%;
   text-align: center;
+}
+.search-container2 {
+  margin-left: 20%;
+  padding: 0;
+  border-radius: 5%;
+  width: 60%;
+  display: inline-block;
+}
+
+.search-container2 button {
+  float: right;
+  padding: .4em 1.5em .334em;
+  margin-top: .43em;
+  margin-right: 16px;
+  background: #FF6200;
+  font-size: 133.5%;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.search-container2 a {
+  width: 35%;
+  margin-right: 20px;
+  margin: 2% 0 0 0;
+}
+
+.search-container2 a:hover {
+  width: 120px;
+  margin-right: 20px;
+}
+
+.search-container2 form {
+  // float: right;
+  padding: 0 0 3.2% 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.searchy {
+    padding: .45em .4em .336em;
+    margin-top: .47em;
+    font-size: 120%;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #FF6200;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    width: 83.1%
+}
+
+.center-text {
+  text-align: center;
+  color: white;
+  font-size: 170%;
+  letter-spacing: 7px;
+  font-family: 'Phosphate Inline', cursive;
+  text-shadow:
+    -1px -1px 0 #FF6200,
+    1px -1px 0 #FF6200,
+    -1px 1px 0 #FF6200,
+    1px 1px 0 #FF6200; 
 }

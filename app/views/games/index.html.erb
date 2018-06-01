@@ -4,8 +4,21 @@
 
     <%= image_tag 'games.jpg', :class => "jumbotron" %>
 
+    <br><br><br>
 
-    <h2> TOP GAMES </h2>
+    <h2 class="center-text"> SEARCH FOR A GAME </h2>
+
+    <div class="search-container2">
+      <form action="/action_page.php">
+        <button type="submit">
+          <i class="search-icon" data-feather="search"></i>
+        </button>
+        <input class="searchy" type="text" placeholder="Search.." name="search">
+      </form>
+    </div>
+
+<br><br><br><br>
+    <h2 class="center-text"> TOP GAMES </h2>
 
     <div class="gal">
       <% @top_games.each do |game| %>

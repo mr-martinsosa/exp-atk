@@ -20,17 +20,9 @@
     <%= link_to "Profile", current_user, :class => "tab" %>
     <%= link_to "Games", games_path, :class => "tab" %>
     <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "tab" %>
-    <div class="search-container">
       <div class="current-user">
         <strong><div class="online"></div><%= current_user.email %></strong>
       </div>
-      <form action="/action_page.php">
-        <button type="submit">
-          <i class="search-icon" data-feather="search"></i>
-        </button>
-        <input type="text" placeholder="Search.." name="search">
-      </form>
-    </div>
   </header>   
     
   <% else %>
@@ -39,17 +31,9 @@
     <%= link_to "Home", root_path, :class => "tab" %>
     <%= link_to "Profile", users_path, :class => "tab" %>
     <%= link_to "Games", games_path, :class => "tab" %>
-    <div class="search-container">
-    <div class="current-user">
+      <div class="current-user">
         <%= link_to "Sign In / Sign Up", user_session_path, :class => "signin_out" %>
-    </div>
-      <form action="/action_page.php">
-        <button type="submit">
-          <i class="search-icon" data-feather="search"></i>
-        </button>
-        <input type="text" placeholder="Search.." name="search">
-      </form>
-    </div>
+      </div>
   </header>
     
   <% end %>
