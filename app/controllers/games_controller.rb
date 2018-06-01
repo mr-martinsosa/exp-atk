@@ -3,11 +3,18 @@ class GamesController < ApplicationController
     # @game = Game.all
     client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
     @top_games = client.get_top_games.data
-    @games = client.get_games({name: ["Super Mario Odyssey","Fortnite","Naruto Shippuden: Ultimate Ninja Storm 4","Destiny 2"]}).data
+    # @games = client.get_games({name: ["Super Mario Odyssey","Fortnite","Naruto Shippuden: Ultimate Ninja Storm 4","Destiny 2"]}).data
+    
+    # search for game, if exists go to page otherwise create
+    @game = if params[:term]
+      Game.where("name = #{:term}")
+    else
+      Game.all
+    end
   end
 
   def show
-    # @game = Game.find(params[:id])
+    @game = Game.find(params[:id])
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
   end
 

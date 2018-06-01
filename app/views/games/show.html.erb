@@ -1,8 +1,9 @@
 <div class="main">
 <div class="container">
-  <h1>GAMES</h1>
+  <!-- <h1>GAMES</h1> -->
+  <h2> <%= @game.name %> </h1>
   <div>
-    <img src="http://via.placeholder.com/550x350" class="main-img">
+    <img src= <%= @game.box_art_url.gsub("-{width}x{height}","") %> class="main-img">
   </div>
 <!-- 
   <div>
@@ -28,7 +29,7 @@
           <%= form.hidden_field :user_id, :value => current_user.id %><br />
           <!-- <%= form.hidden_field :game_id %> -->
           <small><em>Powered by Markdown</em></small> <br>
-          <%= form.submit "Post", :class => "submit" %>
+          <%= form.submit "save", :class => "submit" %>
         <% end %>
       </div>
     </div>
@@ -45,7 +46,7 @@
         </div>
       </div>
     <% end %>
-      
+
   </div>
 </div>
 </div>
