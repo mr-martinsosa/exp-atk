@@ -10,10 +10,12 @@
 
     <div class="search-container2">
       <form action="/action_page.php">
-        <button type="submit">
-          <i class="search-icon" data-feather="search"></i>
-        </button>
-        <input class="searchy" type="text" placeholder="Search.." name="search">
+        <div>
+          <input class="searchy" type="text" placeholder="Search.." name="search">
+          <button type="submit">
+            <i class="search-icon" data-feather="search"></i>
+          </button>
+        </div>
       </form>
     </div>
 
@@ -26,10 +28,10 @@
           <% next %>
         <% end %>
         <div class="pic">
-          <img class="game-pic" src= <%= game.box_art_url.gsub("-{width}x{height}","") %> >
           <div class="game-title">
             <%= game.name %>
           </div>
+          <img class="game-pic" src= <%= game.box_art_url.gsub("-{width}x{height}","") %> >
         </div>
       <% end %>
     </div>
