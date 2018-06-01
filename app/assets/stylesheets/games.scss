@@ -58,11 +58,22 @@
 
 .game-pic {
   width: 15em;
+  height: 20em;
   border: 10px solid #707070;
   border-radius: 20px;
   float: left;
   margin: 10px;
   box-shadow: 0 0 10px #191e22;
+}
+.game-pic:hover {
+  width: 15em;
+  height: 20em;
+  border: 10px solid #FF6200;
+  border-radius: 20px;
+  float: left;
+  margin: 10px;
+  box-shadow: 0 0 20px #FF6200;
+  cursor: pointer;
 }
 
 .game-title {
@@ -132,4 +143,63 @@
     1px -1px 0 #FF6200,
     -1px 1px 0 #FF6200,
     1px 1px 0 #FF6200; 
+}
+
+.post-title {
+  border-radius: 10px;
+  height: 30px;
+  width: 45%;
+  color: #FF6200;
+  background-color: #272F37;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  border: 2px solid #707070;
+  letter-spacing: 3px;
+}
+
+.post-content {
+  border-radius: 10px;
+  height: 75px;
+  width: 90%;
+  color: #FF6200;
+  background-color: #272F37;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #707070;
+  letter-spacing: 3px;
+}
+
+.submit {
+  margin-top: 3%;
+  width: 15%;
+  background-color: #413661;
+  border: 1px solid #707070;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 130%;
+  border-radius: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-right: 11.5%;
+}
+.submit:hover {
+  margin-top: 3%;
+  width: 15%;
+  background-color: #332b4d;
+  border: 1px solid #FF6200;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 130%;
+  border-radius: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-right: 11.5%;
+  cursor: pointer;
 }

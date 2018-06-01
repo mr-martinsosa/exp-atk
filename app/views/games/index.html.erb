@@ -25,10 +25,10 @@
           <% next %>
         <% end %>
         <div class="pic">
-          <img class="game-pic" src= <%= game.box_art_url.gsub("-{width}x{height}","") %> >
           <div class="game-title">
             <%= game.name %>
           </div>
+          <img class="game-pic" src= <%= game.box_art_url.gsub("-{width}x{height}","") %> >
         </div>
       <% end %>
     </div>
