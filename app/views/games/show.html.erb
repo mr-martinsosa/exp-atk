@@ -1,7 +1,7 @@
 <div class="main">
 <div class="container">
   <!-- <h1>GAMES</h1> -->
-  <h2> <%= @game.name %> </h1>
+  <h2 class="head"> <%= @game.name %> </h1>
   <div>
     <img src= <%= @game.box_art_url.gsub("-{width}x{height}","") %> class="main-img">
   </div>
@@ -29,11 +29,10 @@
           <%= form.hidden_field :user_id, :value => current_user.id %><br />
           <!-- <%= form.hidden_field :game_id %> -->
           <small><em>Powered by Markdown</em></small> <br>
-          <%= form.submit "save", :class => "submit" %>
+          <%= form.submit "Post", :class => "submit" %>
         <% end %>
       </div>
     </div>
-
     <% 5.times do %>
       <div class="user-posts">
         <div class="user-post">
@@ -46,6 +45,12 @@
         </div>
       </div>
     <% end %>
+
+    <details>
+      <summary >Show More</summary>
+      <p>coming soon<p>
+    </details>
+    
 
   </div>
 </div>
