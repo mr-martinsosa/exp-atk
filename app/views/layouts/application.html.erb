@@ -13,33 +13,35 @@
   </head>
 
   <body>
-  <% if signed_in? %>
-    <header class="topnav">
-    <div class="third-logo logo"><%= link_to "EK", root_path, :class => "square-logo" %></div>
-    <%= link_to "Home", root_path, :class => "tab" %>
-    <%= link_to "Profile", current_user, :class => "tab" %>
-    <%= link_to "Games", games_path, :class => "tab" %>
-    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "tab" %>
-      <div class="current-user">
-        <strong><div class="online"></div><%= current_user.email %></strong>
-      </div>
-  </header>   
-    
-  <% else %>
-    <header class="topnav">
-    <div class="third-logo logo"><%= link_to "EK", root_path, :class => "square-logo" %></div>
-    <%= link_to "Home", root_path, :class => "tab" %>
-    <%= link_to "Profile", users_path, :class => "tab" %>
-    <%= link_to "Games", games_path, :class => "tab" %>
-      <div class="current-user">
-        <%= link_to "Sign In / Sign Up", user_session_path, :class => "signin_out" %>
-      </div>
-  </header>
-    
-  <% end %>
-    <%= yield %>
-  <script>
-    feather.replace()
-  </script>
+  <div id="wrapper">
+    <% if signed_in? %>
+      <header class="topnav">
+      <div class="third-logo logo"><%= link_to "EK", root_path, :class => "square-logo" %></div>
+      <%= link_to "Home", root_path, :class => "tab" %>
+      <%= link_to "Profile", current_user, :class => "tab" %>
+      <%= link_to "Games", games_path, :class => "tab" %>
+      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "tab" %>
+        <div class="current-user">
+          <strong><div class="online"></div><%= current_user.email %></strong>
+        </div>
+    </header>   
+      
+    <% else %>
+      <header class="topnav">
+      <div class="third-logo logo"><%= link_to "EK", root_path, :class => "square-logo" %></div>
+      <%= link_to "Home", root_path, :class => "tab" %>
+      <%= link_to "Profile", users_path, :class => "tab" %>
+      <%= link_to "Games", games_path, :class => "tab" %>
+        <div class="current-user">
+          <%= link_to "Sign In / Sign Up", user_session_path, :class => "signin_out" %>
+        </div>
+    </header>
+      
+    <% end %>
+      <%= yield %>
+    <script>
+      feather.replace()
+    </script>
+  </div>
   </body>
 </html>
