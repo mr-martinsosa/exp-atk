@@ -6,11 +6,15 @@ class GamesController < ApplicationController
     # @games = client.get_games({name: ["Super Mario Odyssey","Fortnite","Naruto Shippuden: Ultimate Ninja Storm 4","Destiny 2"]}).data
     
     # search for game, if exists go to page otherwise create
-    @game = if params[:term]
-      Game.where("name = #{:term}")
-    else
-      Game.all
-    end
+    # @game = if params[:term]
+    #   Game.where("name = #{:term}")
+    # else
+    #   Game.all
+    # end
+    # games = Game.search(game_params)
+    # games.each do |game|
+    #   p game
+    # end
   end
 
   def show
@@ -34,7 +38,7 @@ class GamesController < ApplicationController
 
     if @game.save
       flash[:info] = "successful"
-      redirect_to game_path(game.id)
+      redirect_to game_path(@game.id)
     else
       flash[:error] = "failed"
       redirect_to new_game_path
@@ -45,9 +49,13 @@ class GamesController < ApplicationController
     @game = Game.new
   end
 
+  def result
+    @game = params[:name]
+  end
+
   private
 
   def game_params
-    params.require(:game).permit(:name)
+    params.permit(:name)
   end
 end
