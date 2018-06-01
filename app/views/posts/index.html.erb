@@ -11,4 +11,22 @@
         <%= link_to "Show", post_path(post.id) %>
         <%= link_to "Delete", post_path(post.id), method: :delete %>
     <li>
+    <%= form_with model: @comment, local: true do |form| %>
+        <%= form.text_area :content, placeholder: "content" %>
+        <%= form.hidden_field :user_id, :value => current_user.id %><br />
+        <%= form.hidden_field :post_id %>
+        <%= form.submit %>
+    <% end %>
+
+    <% @comments.each do |comment| %>
+        <%= comment.content %>
+    <% end %>
+<% end %>
+
+<%= form_with model: @post, local: true do |form| %>
+    <%= form.text_field :title, placeholder: "title" %><br />
+    <%= form.text_area :content, placeholder: "content" %>
+    <%= form.hidden_field :user_id, :value => current_user.id %><br />
+    <%= form.hidden_field :game_id %>
+    <%= form.submit %>
 <% end %>

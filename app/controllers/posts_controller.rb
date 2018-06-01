@@ -2,6 +2,10 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
+
+    @comments = Comment.all
+    @comment = Comment.new
+    @user = User.find_by(params[:id])
   end
 
   def show
@@ -19,7 +23,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @user = current_user
+    @user = User.find_by(params[:id])
+    @comment = Comment.new(comment_params)
 
     if @post.save
       flash[:info] = "post submitted"
@@ -39,5 +44,9 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit(:title, :content, :user_id)
+    end
+
+    def comment_params
+      params.permit(:content, :user_id, :post_id)
     end
 end
