@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
+
+games = client.get_games({name: ["Fortnite", "Super Mario Odyssey", "League of Legends"]}).data
+games.each do |game|
+    Game.create(name: game.name, box_art_url: game.box_art_url)
+end
