@@ -47,18 +47,24 @@ body {
 .main {
   background-color: #272F37;
   width: 100%;
+  max-width: 1298px;
   border: 1px solid #707070;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0 0 15px #191e22;
+  display: inline-block;
 }
+
 header {
   height: 85px;
   width: 100%;
+  max-width: 1298px;
   background-color: #1F272D; 
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border: 1px solid #707070;
+  display: inline-block;
+  box-shadow: 0 0 15px #191e22;
 }
 
 .container {
@@ -225,6 +231,12 @@ img.avatar {
   box-shadow: 0 0 30px #191e22;
   color: #FF6200;
   float: right;
+}
+.user-info h3 {
+  text-align: justify;
+}
+.user-info a {
+  float: left;
 }
 
 .content {
@@ -402,22 +414,34 @@ div.center {
   float: right;
   margin-right: 11.5%;
 }
-
 .user-buttons {
   margin-top: 3%;
-  width: 7%;
+  width: 15%;
   background-color: #413661;
-  border: none;
+  border: 1px solid #FF6200;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 0px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 130%;
   border-radius: 10px;
   font-family: 'Open Sans Condensed', sans-serif;
-  float: left;
-  margin-right: 2%;
-  border: 1px solid #9A6EAA;
-  box-shadow: 0 0 5px #191e22;
+  margin-right: 10px;
+}
+.user-buttons:hover {
+  margin-top: 3%;
+  width: 15%;
+  background-color: #332b4d;
+  border: 1px solid #FF6200;
+  color: white;
+  padding: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 130%;
+  border-radius: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-right: 10px;
+  cursor: pointer;
 }
