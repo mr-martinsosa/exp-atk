@@ -52,6 +52,7 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0 0 15px #191e22;
+  display: inline-block;
 }
 
 header {
@@ -62,6 +63,8 @@ header {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border: 1px solid #707070;
+  display: inline-block;
+  box-shadow: 0 0 15px #191e22;
 }
 
 .container {
@@ -228,6 +231,12 @@ img.avatar {
   box-shadow: 0 0 30px #191e22;
   color: #FF6200;
   float: right;
+}
+.user-info h3 {
+  text-align: justify;
+}
+.user-info a {
+  float: left;
 }
 
 .content {
