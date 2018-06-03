@@ -14,22 +14,20 @@
         <%= form_with model: @post, local: true do |form| %>
           <%= form.text_field :title, placeholder: "title", :class => "post-title" %><br />
           <%= form.text_area :content, placeholder: "content", :class => "post-content" %>
-          <%#= form.hidden_field :user_id, :value => current_user.id %><br />
-          <!-- <%#= form.hidden_field :game_id %> -->
+          <%= form.hidden_field :user_id, :value => current_user.id %><br />
+          <%= form.hidden_field :game_id %>
           <small><em>Powered by Markdown</em></small> <br>
           <%= form.submit "Post", :class => "submit" %>
         <% end %>
       </div>
     </div>
-    <% 5.times do %>
+    <% @game.posts.each do |post| %>
       <div class="user-posts">
         <div class="user-post">
           <img class="mini-avatar" src="http://via.placeholder.com/50x50">
-          <span><b>User Post Title</b></span><br>
-          <span><em>User</em></span>
-          <p>Post Content - Lorem ipsum dolor sit amet, modo unum minim his at. Sit perfecto mediocritatem ad, ut graeco cetero ullamcorper pro, referrentur
-          theophrastus sed ad. Exerci mentitum ei duo. Qui ex utinam consequat. Periculis definitionem et per. Eu solum clita indoctum
-          pri, ius illud erroribus consequat ex, vis nibh habemus cu.</p>
+          <span><b><%= post.title %></b></span><br>
+          <span><em><%= post.user.email %></em></span>
+          <p>Post Content - <%= @markdown.render(post.content).html_safe() %></p>
         </div>
       </div>
     <% end %>

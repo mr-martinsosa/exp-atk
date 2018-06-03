@@ -34,6 +34,7 @@ class GamesController < ApplicationController
   end
 
   def create
+    @game = Game.find(params[:id])
     client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
     game = client.get_games({name: ["#{params[:name]}"]}).data
     game.each do |game|
