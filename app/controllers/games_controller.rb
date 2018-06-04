@@ -4,7 +4,7 @@ class GamesController < ApplicationController
     client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
     @top_games = client.get_top_games.data
     # @games = client.get_games({name: ["Super Mario Odyssey","Fortnite","Naruto Shippuden: Ultimate Ninja Storm 4","Destiny 2"]}).data
-    
+
     # search for game, if exists go to page otherwise create
     # @game = if params[:term]
     #   Game.where("name = #{:term}")
@@ -20,6 +20,7 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
+    @post = Post.new
   end
 
   def edit
@@ -37,15 +38,10 @@ class GamesController < ApplicationController
     client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
     game = client.get_games({name: ["#{params[:name]}"]}).data
     game.each do |game|
-      @game = Game.where(:name =>"#{game.name}").first_or_create(:box_art_url => "#{game.box_art_url}")
+      @game = Game.create(name: game.name, box_art_url: game.box_art_url)
     end
 
-    if @game == nil
-      flash[:error] = "game does not exist"
-      redirect_to games_path
-    elsif Game.find(@game.id)
-      redirect_to game_path(@game.id)  
-    elsif @game.save
+    if @game.save
       flash[:info] = "successful"
       redirect_to game_path(@game.id)
     else

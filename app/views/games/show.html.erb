@@ -14,8 +14,8 @@
         <%= form_with model: @post, local: true do |form| %>
           <%= form.text_field :title, placeholder: "title", :class => "post-title" %><br />
           <%= form.text_area :content, placeholder: "content", :class => "post-content" %>
-          <%#= form.hidden_field :user_id, :value => current_user.id %><br />
-          <!-- <%#= form.hidden_field :game_id %> -->
+          <% form.text_field :user_id, placeholder: current_user.id %><br />
+          <% form.text_field :game_id, placeholder: @game.id %>
           <small><em>Powered by Markdown</em></small> <br>
           <%= form.submit "Post", :class => "submit" %>
         <% end %>
@@ -38,13 +38,13 @@
       <summary >Show More</summary>
       <p>coming soon<p>
     </details>
-    
+
 
   </div>
 </div>
 </div>
   <% end %>
-<!-- 
+<!--
   <div>
     <img src="http://via.placeholder.com/250x250" class="mini-img">
   </div>
@@ -58,14 +58,14 @@
     <img src="http://via.placeholder.com/250x250" class="mini-img">
   </div>
   -->
-  
-  
+
+
 
   <footer id="wrapper">
 
     <div class="column one">
       © EXP-ATK
-    </div> 
+    </div>
 
     <!-- <div class="blank">
 
