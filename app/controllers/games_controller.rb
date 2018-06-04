@@ -21,6 +21,7 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
     @post = Post.new
+    @posts = @game.posts
   end
 
   def edit
