@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts
   has_many :comments
-  
+
   include Gravtastic
   gravtastic
 

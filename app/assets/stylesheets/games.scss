@@ -142,7 +142,7 @@
     -1px -1px 0 #FF6200,
     1px -1px 0 #FF6200,
     -1px 1px 0 #FF6200,
-    1px 1px 0 #FF6200; 
+    1px 1px 0 #FF6200;
 }
 
 .post-title {
@@ -213,7 +213,11 @@
     -1px -1px 0 #FF6200,
     1px -1px 0 #FF6200,
     -1px 1px 0 #FF6200,
-    1px 1px 0 #FF6200; 
+    1px 1px 0 #FF6200;
+}
+.reverse-post {
+  display: flex;
+  flex-flow: column-reverse;
 }
 
 details summary::-webkit-details-marker { display: none; }
