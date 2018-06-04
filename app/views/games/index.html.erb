@@ -20,7 +20,7 @@
     <h2 class="center-text"> TOP GAMES </h2>
 
     <div class="gal">
-      <% @top_games.each do |game| %>
+      <% @top_games.each_with_index do |game, index| %>
         <% if game.name == "IRL" || game.name == "Casino" || game.name == "Talk Shows" || game.name == "Creative" || game.name == "Music" %>
           <% next %>
         <% end %>
@@ -28,7 +28,8 @@
           <div class="game-title">
             <%= game.name %>
           </div>
-          <img class="game-pic" src= <%= game.box_art_url.gsub("-{width}x{height}","") %> >
+          
+            <%= link_to image_tag("#{game.box_art_url.gsub("-{width}x{height}","")}"), game_path(@top_games_id[index]), class: "game-pic"%>
         </div>
       <% end %>
     </div>

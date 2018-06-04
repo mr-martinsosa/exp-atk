@@ -3,7 +3,11 @@ class GamesController < ApplicationController
     # @game = Game.all
     client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
     @top_games = client.get_top_games.data
-    # @games = client.get_games({name: ["Super Mario Odyssey","Fortnite","Naruto Shippuden: Ultimate Ninja Storm 4","Destiny 2"]}).data
+    @top_games_id = []
+    @top_games.each do |top_game|
+      @top_games_id.push(Game.where(:name =>"#{top_game.name}").first_or_create(:box_art_url => "#{top_game.box_art_url}"))
+    end
+      # @games = client.get_games({name: ["Super Mario Odyssey","Fortnite","Naruto Shippuden: Ultimate Ninja Storm 4","Destiny 2"]}).data
     
     # search for game, if exists go to page otherwise create
     # @game = if params[:term]
@@ -19,6 +23,14 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    # @game_name = Game.find(params[:name])
+    # client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
+    # game = client.get_games({name: ["#{params[:name]}"]}).data
+    # p "@!!!!!!!!!!!!!!!!!!G#{game}"
+    # game.each do |game|
+    #   @game = Game.where(:name =>"#{game.name}").first_or_create(:box_art_url => "#{game.box_art_url}")
+    # end
+    # @game = @game.id
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
   end
 
