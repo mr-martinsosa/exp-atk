@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def edit
@@ -19,7 +20,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @user = current_user
     @game = @post.game_id
 
     if @post.save
@@ -33,7 +33,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    # @user = current_user
   end
 
   private
