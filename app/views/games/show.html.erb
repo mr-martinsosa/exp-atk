@@ -31,7 +31,7 @@
       <div class="user-posts">
         <div class="user-post">
           <%= image_tag User.find(post.user_id).gravatar_url, :class => "mini-avatar" %>
-          <span><em><%= User.find(post.user_id).username %></em></span>
+          <span><em><%= User.find(post.user_id).username %></em></span><br/>
           <span><b><%= post.title %></b></span><br>
           <p><%= post.created_at %></p>
           <p><%= post.content %></p>
