@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all
+    # redirect_to user_path
   end
 
   def show
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    current_user.destroy 
   end
 
   def update
