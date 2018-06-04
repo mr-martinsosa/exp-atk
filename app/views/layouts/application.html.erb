@@ -24,8 +24,9 @@
         <div class="current-user">
           <strong><div class="online"></div><%= current_user.username %></strong>
         </div>
-    </header>   
-      
+    </header> 
+    <% elsif current_page?(root_path) %>  
+      <header style="display: none;"></header>
     <% else %>
       <header class="topnav">
       <div class="third-logo logo"><%= link_to "EK", root_path, :class => "square-logo" %></div>
@@ -38,6 +39,7 @@
     </header>
       
     <% end %>
+    
       <%= yield %>
     <script>
       feather.replace()
