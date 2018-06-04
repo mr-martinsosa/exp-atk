@@ -37,10 +37,15 @@ class GamesController < ApplicationController
     client = Twitch::Client.new client_id: "#{ENV["TWITCH_CLIENT"]}"
     game = client.get_games({name: ["#{params[:name]}"]}).data
     game.each do |game|
-      @game = Game.create(name: game.name, box_art_url: game.box_art_url)
+      @game = Game.where(:name =>"#{game.name}").first_or_create(:box_art_url => "#{game.box_art_url}")
     end
 
-    if @game.save
+    if @game == nil
+      flash[:error] = "game does not exist"
+      redirect_to games_path
+    elsif Game.find(@game.id)
+      redirect_to game_path(@game.id)  
+    elsif @game.save
       flash[:info] = "successful"
       redirect_to game_path(@game.id)
     else
