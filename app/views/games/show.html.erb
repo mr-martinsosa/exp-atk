@@ -27,7 +27,7 @@
     <% @posts.each do |post| %>
       <div class="user-posts">
         <div class="user-post">
-          <img class="mini-avatar" src="http://via.placeholder.com/50x50">
+          <%= image_tag User.find(post.user_id).gravatar_url, :class => "mini-avatar" %>
           <span><b><%= post.title %></b></span><br>
           <span><em><%= User.find(post.user_id).username %></em></span>
           <p><%= post.created_at %></p>
