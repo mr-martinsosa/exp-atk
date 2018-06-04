@@ -13,7 +13,7 @@
       <div class="post">
 
         <%= form_with model: @post, local: true do |form| %>
-        <%= form.text_field :user_id, placeholder: User.find(current_user.id).id %> <br/>
+        <%= form.text_field :user_id, placeholder: current_user.id %> <br/>
         <%= form.text_field :game_id, placeholder: @game.id %> <br/>
           <%= form.text_field :title, placeholder: "title", :class => "post-title" %><br />
           <%= form.text_area :content, placeholder: "content", :class => "post-content" %>
@@ -23,18 +23,19 @@
         <% end %>
       </div>
     </div>
-    <% 5.times do %>
+    <div class="reverse-post">
+    <% @posts.each do |post| %>
       <div class="user-posts">
         <div class="user-post">
-          <img class="mini-avatar" src="http://via.placeholder.com/50x50">
-          <span><b>User Post Title</b></span><br>
-          <span><em>User</em></span>
-          <p>Post Content - Lorem ipsum dolor sit amet, modo unum minim his at. Sit perfecto mediocritatem ad, ut graeco cetero ullamcorper pro, referrentur
-          theophrastus sed ad. Exerci mentitum ei duo. Qui ex utinam consequat. Periculis definitionem et per. Eu solum clita indoctum
-          pri, ius illud erroribus consequat ex, vis nibh habemus cu.</p>
+          <%= image_tag User.find(post.user_id).gravatar_url, :class => "mini-avatar" %>
+          <span><b><%= post.title %></b></span><br>
+          <span><em><%= User.find(post.user_id).username %></em></span>
+          <p><%= post.created_at %></p>
+          <p><%= post.content %></p>
         </div>
       </div>
     <% end %>
+  </div>
 
     <details>
       <summary >Show More</summary>
