@@ -8,9 +8,9 @@
         <div class="user">
           <%= image_tag @user.gravatar_url, :class => "avatar" %>
           <div class="user-info">
-            <h3>Username: <%= @user.username %></h3> 
-            <h3>E-Mail: <%= @user.email %></h3>
-            <h3>Birthday: <%= @user.birthday %></h3>
+            <h3><span>Username:</span> <%= @user.username %></h3> 
+            <h3><span>E-Mail:</span> <%= @user.email %></h3>
+            <h3><span>Birthday:</span> <%= @user.birthday %></h3>
             <div>
               <%= link_to "Edit", edit_user_path, :class => "user-buttons" %>
               <a class="user-buttons">Delete</a>

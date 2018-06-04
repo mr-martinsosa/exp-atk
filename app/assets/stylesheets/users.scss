@@ -175,11 +175,19 @@ img.avatar {
   background-color: #707070;
   border: 10px solid #707070;
   box-shadow: 0 0 30px #191e22;
-  color: #FF6200;
+  color: #272F37;
   float: right;
+  letter-spacing: 2px;
 }
 .user-info h3 {
   text-align: justify;
+}
+.user-info span {
+  text-shadow:
+    -1px -1px 0 #FF6200,
+    1px -1px 0 #FF6200,
+    -1px 1px 0 #FF6200,
+    1px 1px 0 #FF6200; 
 }
 .user-info a {
   float: left;
