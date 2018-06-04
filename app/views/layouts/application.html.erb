@@ -24,20 +24,22 @@
         <div class="current-user">
           <strong><div class="online"></div><%= current_user.username %></strong>
         </div>
-    </header>   
-      
+    </header> 
+    <% elsif current_page?(root_path) %>  
+      <header style="display: none;"></header>
     <% else %>
       <header class="topnav">
       <div class="third-logo logo"><%= link_to "EK", root_path, :class => "square-logo" %></div>
       <%= link_to "Home", root_path, :class => "tab" %>
       <%= link_to "Profile", users_path, :class => "tab" %>
       <%= link_to "Games", games_path, :class => "tab" %>
-        <div class="current-user">
+        <div class="sign">
           <%= link_to "Sign In / Sign Up", user_session_path, :class => "signin_out" %>
         </div>
     </header>
       
     <% end %>
+    
       <%= yield %>
     <script>
       feather.replace()
