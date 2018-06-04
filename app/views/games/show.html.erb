@@ -31,13 +31,28 @@
       <div class="user-posts">
         <div class="user-post">
           <%= image_tag User.find(post.user_id).gravatar_url, :class => "mini-avatar" %>
-          <span><b><%= post.title %></b></span><br>
           <span><em><%= User.find(post.user_id).username %></em></span>
+          <span><b><%= post.title %></b></span><br>
           <p><%= post.created_at %></p>
           <p><%= post.content %></p>
         </div>
-      </div>
+        <%= form_with model: @comment, local: true do |form| %>
+        <%= form.hidden_field :user_id, :value => current_user.id %>
+        <%= form.hidden_field :post_id, :value => post.id %>
+          <%= form.text_field :content, placeholder: "add a comment...", :class => "post-content" %><br/>
+          <small><em>Powered by Markdown</em></small> <br>
+          <%= form.submit "Post", :class => "submit" %>
+        <% end %>
+        <div class="reverse-post">
+      <% post.comments.each do |comment| %>
+      <%= image_tag User.find(comment.user_id).gravatar_url, :class => "mini-avatar" %>
+      <span><em><%= User.find(comment.user_id).username %></em></span>
+      <p><%= comment.content %></p>
     <% end %>
+  </div>
+    </div>
+    <% end %>
+
   </div>
   <% end %>
 
