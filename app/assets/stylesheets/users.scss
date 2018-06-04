@@ -130,10 +130,11 @@ div.logo {
   width: 10px;
   height: 10px;
   background-color: greenyellow;
-  border: 1px solid #707070;
+  border: 1px solid green;
   border-radius: 100%;
   display: inline-block;
   margin-right: 10px;
+  box-shadow: 0 0 10px lightgreen;
 }
 
 
