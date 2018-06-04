@@ -63,4 +63,5 @@ class GamesController < ApplicationController
   def game_params
     params.permit(:name)
   end
+
 end

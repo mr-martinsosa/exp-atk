@@ -11,11 +11,19 @@
     <div class="content">
     <div class="posts">
       <div class="post">
+
         <%= form_with model: @post, local: true do |form| %>
+        <%= form.text_field :user_id, placeholder: User.find(current_user.id).id %> <br/>
+        <%= form.text_field :game_id, placeholder: @game.id %> <br/>
           <%= form.text_field :title, placeholder: "title", :class => "post-title" %><br />
           <%= form.text_area :content, placeholder: "content", :class => "post-content" %>
+<<<<<<< Updated upstream
           <% form.text_field :user_id, placeholder: current_user.id %><br />
           <% form.text_field :game_id, placeholder: @game.id %>
+=======
+          <%#= form.hidden_field :user_id, :value => current_user.id %><br />
+          <%#= form.hidden_field :game_id %>
+>>>>>>> Stashed changes
           <small><em>Powered by Markdown</em></small> <br>
           <%= form.submit "Post", :class => "submit" %>
         <% end %>
