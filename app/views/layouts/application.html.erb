@@ -22,7 +22,7 @@
       <%= link_to "Games", games_path, :class => "tab" %>
       <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "tab" %>
         <div class="current-user">
-          <strong><div class="online"></div><%= current_user.email %></strong>
+          <strong><div class="online"></div><%= current_user.username %></strong>
         </div>
     </header>   
       
