@@ -12,14 +12,14 @@
             <h3><span>E-Mail:</span> <%= @user.email %></h3>
             <h3><span>Birthday:</span> <%= @user.birthday %></h3>
             <div>
-              <%= link_to current_user, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <%= link_to current_user, :class => "user-buttons", method: :delete, data: { confirm: 'Are you sure?' } do %>
                 Delete
               <% end %> 
             </div>
           </div>
 
           <div class="content">
-
+            
             <% @user.posts.each do |post| %>
               <div class="posts">
                 <div class="post">
@@ -32,7 +32,7 @@
             <% end %>
 
             <div class="articles">
-          
+              
             </div>
             <div class="game-revs">
           
@@ -49,12 +49,9 @@
   <footer id="wrapper">
 
     <div class="column one">
-      © EXP-ATK
+      © 2018 EXP-ATK
     </div> 
 
-    <!-- <div class="blank">
-
-    </div> -->
 
     <div class="column two">
       <ul>

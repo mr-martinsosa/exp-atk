@@ -13,6 +13,7 @@ class GamesController < ApplicationController
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
     @post = Post.new
     @posts = @game.posts
+    @comment = Comment.new
   end
 
   def edit
