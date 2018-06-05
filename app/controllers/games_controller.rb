@@ -34,7 +34,13 @@ class GamesController < ApplicationController
       @game = Game.create(name: game.name, box_art_url: game.box_art_url)
     end
 
-    if @game.save
+    if @game == nil
+      flash[:error] = "game does not exist"
+      redirect_to games_path
+    elsif Game.find_by(name: @game.name)
+      game_path_id = Game.find_by(name: @game.name)
+      redirect_to game_path(game_path_id)  
+    elsif @game.save
       flash[:info] = "successful"
       redirect_to game_path(@game.id)
     else
