@@ -18,64 +18,33 @@
             </div>
           </div>
 
+
+
+
           <div class="content">
-            
             <% @user.posts.each do |post| %>
-              <div class="posts">
-                <div class="post">
-                  <%= image_tag @user.gravatar_url, :class => "mini-avatar" %>
-                  <span><b> <%= @markdown.render(post.title).html_safe() %> </b></span><br>
-                  <span><em> <%= @user.username %></em></span>
-                  <p><%= @markdown.render(post.content).html_safe() %> </p>
+              <div class="reverse-post">
+                <div class="posts">
+                  <div class="post">
+                    <%= image_tag @user.gravatar_url, :class => "mini-avatar" %>
+                    <span>
+                    <%= @user.username %> on <strong><%= link_to  "#{post.game.name}", game_path(post.game_id), :class => "game-link" %><strong>
+                    </span>
+                    <span>
+                      <b><%= @markdown.render(post.title).html_safe() %></b>
+                    </span>
+                    <br>
+                    <div>
+                      <%= @markdown.render(post.content).html_safe() %> 
+                    </div>
+                  </div>
                 </div>
               </div>
             <% end %>
-
-            <div class="articles">
-              
-            </div>
-            <div class="game-revs">
-          
-            </div>
           </div>
         </div>
       </div>
       
 
     </div>
-
-
-    
-  <footer id="wrapper">
-
-    <div class="column one">
-      © 2018 EXP-ATK
-    </div> 
-
-
-    <div class="column two">
-      <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-      </ul>
-    </div>
-
-    <div class="column three">
-      <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-      </ul>
-    </div>
-
-  </footer>
-
-    <script>
-      feather.replace()
-    </script>
 

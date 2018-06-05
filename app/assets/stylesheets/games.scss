@@ -14,7 +14,7 @@
 
 .mini-img {
   border: 10px solid #707070;
-  border-radius: 20px;
+  border-radius: 5px;
   display: inline-block;
   float: left;
   margin: 10px;
@@ -24,7 +24,7 @@
 .game {
   width: 20%;
   border: 10px solid #707070;
-  border-radius: 20px;
+  border-radius: 5px;
   display: inline-block;
   margin: 5px;
   box-shadow: 0 0 30px #191e22;
@@ -40,7 +40,7 @@
 .jumbotron {
   width: 90%;
   border: 10px solid #707070;
-  border-radius: 20px;
+  border-radius: 5px;
   display: inline-block;
   margin-bottom: 10px;
   box-shadow: 0 0 10px #191e22;
@@ -60,7 +60,7 @@
   width: 15em;
   height: 20em;
   border: 10px solid #707070;
-  border-radius: 20px;
+  border-radius: 5px;
   float: left;
   margin: 10px;
   box-shadow: 0 0 10px #191e22;
@@ -69,7 +69,7 @@
   width: 15em;
   height: 20em;
   border: 10px solid #FF6200;
-  border-radius: 20px;
+  border-radius: 5px;
   float: left;
   margin: 10px;
   box-shadow: 0 0 20px #FF6200;
@@ -82,7 +82,7 @@
 }
 .search-container2 {
   padding: 0;
-  border-radius: 5%;
+  border-radius: 5px;
   width: 60%;
   display: inline-block;
 }
@@ -94,8 +94,8 @@
   background: #FF6200;
   font-size: 133.5%;
   border: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   cursor: pointer;
 }
 
@@ -118,12 +118,12 @@
 }
 
 .searchy {
-  padding: .45em .4em .336em;
+  padding: .4em .4em .336em;
   margin-top: .47em;
   font-size: 117.6%;
   border: none;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   color: #FF6200;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
@@ -146,7 +146,7 @@
 }
 
 .post-title {
-  border-radius: 10px;
+  border-radius: 5px;
   height: 30px;
   width: 45%;
   color: #FF6200;
@@ -160,7 +160,7 @@
 }
 
 .post-content {
-  border-radius: 10px;
+  border-radius: 5px;
   height: 75px;
   width: 90%;
   color: #FF6200;
@@ -174,31 +174,29 @@
 
 .submit {
   margin-top: 3%;
-  width: 15%;
   background-color: #413661;
   border: 1px solid #707070;
   color: white;
-  padding: 10px 32px;
-  text-align: center;
+  padding: 2% 10%;
+  text-align: justify;
   text-decoration: none;
   display: inline-block;
   font-size: 130%;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-right: 11.5%;
 }
 .submit:hover {
   margin-top: 3%;
-  width: 15%;
   background-color: #332b4d;
   border: 1px solid #FF6200;
   color: white;
-  padding: 10px 32px;
-  text-align: center;
+  padding: 2% 10%;
+  text-align: justify;
   text-decoration: none;
   display: inline-block;
   font-size: 130%;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-right: 11.5%;
   cursor: pointer;
@@ -222,3 +220,19 @@
 
 details summary::-webkit-details-marker { display: none; }
 details summary:hover { cursor: pointer; }
+
+details summary {
+  text-align: center;
+  margin: 20px;
+  border: 2px solid #707070;
+  border-radius: 5px;
+}
+
+details .posts {
+  background-color: #1F272D;
+  border: 2px solid #9A6EAA;
+  border-radius: 5px;
+  text-align: justify;
+  margin: 10px 15px;
+  box-shadow: 0 0 10px #272F37;
+}

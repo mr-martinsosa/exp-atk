@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # devise_for :users
   devise_for :users, :controllers => { :registrations => "users/registrations" }
   root "home#index"
+  resources :home
   resources :comments
   resources :games
   resources :posts

@@ -14,23 +14,25 @@
   src: url('fonts/Quantum.otf')
 }
 div.notice {
+  margin-top: 30px; 
   background-color: lightgreen;
   width: 50%;
   height: 60px;
   padding: 1.5% 0 0;
   text-align: center;
   font-size: 140%;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-left: 25%;
 }
 div.alert {
+  margin-top: 30px; 
   background-color: #ed4f4f;
   width: 50%;
   height: 60px;
   padding: 1.5% 0 0;
   text-align: center;
   font-size: 140%;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-left: 25%;
 }
 body {
@@ -49,8 +51,8 @@ body {
   width: 100%;
   max-width: 1383px;
   border: 1px solid #707070;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   box-shadow: 0 0 15px #191e22;
   display: inline-block;
 }
@@ -60,8 +62,8 @@ header {
   width: 100%;
   max-width: 1383px;
   background-color: #1F272D; 
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border: 1px solid #707070;
   display: inline-block;
   box-shadow: 0 0 15px #191e22;
@@ -183,7 +185,7 @@ div.heading {
 img.avatar {
   height: 300px;
   width: 25%;
-  border-radius: 20px;
+  border-radius: 5px;
   border: 10px solid #707070;
   box-shadow: 0 0 30px #191e22;
   
@@ -194,7 +196,7 @@ img.avatar {
   padding: 0 20px;
   height: 300px;
   width: 66%;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: #707070;
   border: 10px solid #707070;
   box-shadow: 0 0 30px #191e22;
@@ -216,13 +218,24 @@ img.avatar {
   float: left;
 }
 
+.game-link {
+  font-size: 25px;
+  color: #FF6200;
+  text-decoration: none;
+}
+.game-link:hover {
+  font-size: 25px;
+  color: #9A6EAA;
+  text-decoration: none;
+}
+
 .content {
   margin: 50px 5px 50px 0;
   padding: 30px;
   width: 66%;
   background-color: #707070;
   display: inline-block;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: justify;
   box-shadow: 0 0 30px #191e22;
 }
@@ -237,7 +250,7 @@ img.avatar {
 .posts {
   background-color: #1F272D;
   border: 2px solid #FF6200;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: justify;
   margin: 15px;
   box-shadow: 0 0 10px #FF6200;
@@ -245,10 +258,13 @@ img.avatar {
 .post {
   padding: 20px;
 }
+.post p {
+  margin: 0;
+}
 .user-posts {
   background-color: #1F272D;
   border: 2px solid #FF6200;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: justify;
   margin: 15px;
   box-shadow: 0 0 10px #191e22;
@@ -286,7 +302,7 @@ li {
 .form {
   width: 50%;
   padding: 10px 0;
-  border-radius: 20px; 
+  border-radius: 5px; 
   background-color: #707070;
   margin-bottom: 75px;
 }
@@ -294,7 +310,7 @@ li {
   padding: 0;
   margin: 0;
   width: 99.7%;
-  border-radius: 20px; 
+  border-radius: 5px; 
   background-color: #1F272D;
   border: 1px solid #707070;
 }
@@ -304,7 +320,7 @@ div.center {
 }
 
 .input {
-  border-radius: 10px;
+  border-radius: 5px;
   height: 30px;
   width: 75%;
   color: #FF6200;
@@ -316,7 +332,7 @@ div.center {
   letter-spacing: 3px;
 }
 .fname {
-  border-radius: 10px;
+  border-radius: 5px;
   height: 30px;
   width: 96%;
   color: #FF6200;
@@ -328,7 +344,7 @@ div.center {
   letter-spacing: 3px;
 }
 .lname {
-  border-radius: 10px;
+  border-radius: 5px;
   height: 30px;
   width: 97%;
   color: #FF6200;
@@ -369,7 +385,7 @@ div.center {
   text-decoration: none;
   display: inline-block;
   font-size: 130%;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Open Sans Condensed', sans-serif;
   float: left;
   margin-left: 11%;
@@ -386,7 +402,7 @@ div.center {
   text-decoration: none;
   display: inline-block;
   font-size: 130%;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Open Sans Condensed', sans-serif;
   float: right;
   margin-right: 11.5%;
@@ -402,7 +418,7 @@ div.center {
   text-decoration: none;
   display: inline-block;
   font-size: 130%;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-right: 10px;
 }
@@ -417,7 +433,7 @@ div.center {
   text-decoration: none;
   display: inline-block;
   font-size: 130%;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-right: 10px;
   cursor: pointer;
