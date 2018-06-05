@@ -45,12 +45,13 @@
             <%= form.text_area :content, placeholder: "add a comment...", :class => "post-content" %><br/>
             <small><em>Powered by Markdown</em></small> <br>
             <%= form.submit "Comment", :class => "submit" %>
-          </div>
+          
           
         <% end %>
 
         <details>
           <summary >Comments</summary>
+          <div class="reverse-post">
           <% post.comments.each do |comment| %>
             <div class="">
               <div class="posts">
@@ -59,11 +60,12 @@
                   <%= image_tag User.find(comment.user_id).gravatar_url, :class => "mini-avatar" %>
                   <span><em><%= User.find(comment.user_id).username %></em></span>
                   <p><%= @markdown.render(comment.content).html_safe() %></p>
+                  </div>
                   
                 </div>
               </div>
             <% end %>
-
+          </div>
 
 
           </div>
@@ -96,37 +98,3 @@
     <img src="http://via.placeholder.com/250x250" class="mini-img">
   </div>
   -->
-
-
-
-  <footer id="wrapper">
-
-    <div class="column one">
-      © EXP-ATK
-    </div>
-
-    <!-- <div class="blank">
-
-    </div> -->
-
-    <div class="column two">
-      <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-      </ul>
-    </div>
-
-    <div class="column three">
-      <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-      </ul>
-    </div>
-
-  </footer>
