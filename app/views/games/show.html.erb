@@ -1,7 +1,12 @@
 <div class="main">
 <div class="container">
   <!-- <h1>GAMES</h1> -->
-
+<% if current_user == nil %>
+  <h2> You must be signed in to view this page </h2>
+  <div class="must-sign">
+    <%= link_to "Sign In / Sign Up", user_session_path, :class => "signin_out" %>
+  </div>
+<% else %>
   <% if @game != nil %>
     <h2 class="head"> <%= @game.name %> </h1>
     <div>
@@ -28,7 +33,7 @@
         <% elsif @posts.count != 0 %>
 
       <% @posts.each do |post| %>
-      
+
         <div class="user-posts">
           <div class="user-post">
             <%= image_tag User.find(post.user_id).gravatar_url, :class => "mini-avatar" %>
@@ -37,7 +42,7 @@
             <!-- <p><%= post.created_at %></p> -->
             <p><%= @markdown.render(post.content).html_safe() %></p>
           </div>
-          
+
           <div class="post">
             <%= form_with model: @comment, local: true do |form| %>
             <%= form.hidden_field :user_id, :value => current_user.id %>
@@ -45,8 +50,8 @@
             <%= form.text_area :content, placeholder: "add a comment...", :class => "post-content" %><br/>
             <small><em>Powered by Markdown</em></small> <br>
             <%= form.submit "Comment", :class => "submit" %>
-          
-          
+
+
         <% end %>
 
         <details>
@@ -56,12 +61,12 @@
             <div class="">
               <div class="posts">
                 <div class="post">
-                  
+
                   <%= image_tag User.find(comment.user_id).gravatar_url, :class => "mini-avatar" %>
                   <span><em><%= User.find(comment.user_id).username %></em></span>
                   <p><%= @markdown.render(comment.content).html_safe() %></p>
                   </div>
-                  
+
                 </div>
               </div>
             <% end %>
@@ -70,19 +75,20 @@
 
           </div>
         </details>
-    
+
     </div>
     <% end %>
 
   </div>
   <% end %>
 
-    
+
 
 
   </div>
 </div>
 </div>
+  <% end %>
   <% end %>
 <!--
   <div>
