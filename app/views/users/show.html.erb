@@ -6,78 +6,45 @@
         </div>
 
         <div class="user">
-          <%= image_tag @user.gravatar_url, :class => "avatar" %>
+           <%= image_tag @user.gravatar_url, :class => "avatar" %>
           <div class="user-info">
             <h3><span>Username:</span> <%= @user.username %></h3> 
             <h3><span>E-Mail:</span> <%= @user.email %></h3>
             <h3><span>Birthday:</span> <%= @user.birthday %></h3>
             <div>
-              <%= link_to "Edit", edit_user_path, :class => "user-buttons" %>
-              <a class="user-buttons">Delete</a>
+              <%= link_to current_user, :class => "user-buttons", method: :delete, data: { confirm: 'Are you sure?' } do %>
+                Delete
+              <% end %> 
             </div>
           </div>
 
-          <div class="content">
 
+
+
+          <div class="content">
             <% @user.posts.each do |post| %>
-              <div class="posts">
-                <div class="post">
-                  <%= image_tag @user.gravatar_url, :class => "mini-avatar" %>
-                  <span><b> <%= @markdown.render(post.title).html_safe() %> </b></span><br>
-                  <span><em> <%= @user.username %></em></span>
-                  <p><%= @markdown.render(post.content).html_safe() %> </p>
+              <div class="reverse-post">
+                <div class="posts">
+                  <div class="post">
+                    <%= image_tag @user.gravatar_url, :class => "mini-avatar" %>
+                    <span>
+                    <%= @user.username %> on <strong><%= link_to  "#{post.game.name}", game_path(post.game_id), :class => "game-link" %><strong>
+                    </span>
+                    <span>
+                      <b><%= @markdown.render(post.title).html_safe() %></b>
+                    </span>
+                    <br>
+                    <div>
+                      <%= @markdown.render(post.content).html_safe() %> 
+                    </div>
+                  </div>
                 </div>
               </div>
             <% end %>
-
-            <div class="articles">
-          
-            </div>
-            <div class="game-revs">
-          
-            </div>
           </div>
         </div>
       </div>
       
 
     </div>
-
-
-    
-  <footer id="wrapper">
-
-    <div class="column one">
-      © EXP-ATK
-    </div> 
-
-    <!-- <div class="blank">
-
-    </div> -->
-
-    <div class="column two">
-      <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-      </ul>
-    </div>
-
-    <div class="column three">
-      <ul>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-        <li>LINK</li>
-      </ul>
-    </div>
-
-  </footer>
-
-    <script>
-      feather.replace()
-    </script>
 

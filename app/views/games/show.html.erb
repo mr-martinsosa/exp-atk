@@ -9,57 +9,73 @@
     </div>
 
     <div class="content">
-    <div class="posts">
-      <div class="post">
+      <div class="posts">
+        <div class="post">
 
-        <%= form_with model: @post, local: true do |form| %>
-        <%= form.hidden_field :user_id, :value => current_user.id %>
-        <%= form.hidden_field :game_id, :value => @game.id %>
-          <%= form.text_field :title, placeholder: "title", :class => "post-title" %><br />
-          <%= form.text_area :content, placeholder: "content", :class => "post-content" %><br/>
-
-          <small><em>Powered by Markdown</em></small> <br>
-          <%= form.submit "Post", :class => "submit" %>
-        <% end %>
-      </div>
-    </div>
-    <div class="reverse-post">
-      <% if @posts.count == 0 %>
-      <p>There are no posts! Be the first to create a post about this game...</p>
-      <% elsif @posts.count != 0 %>
-    <% @posts.each do |post| %>
-      <div class="user-posts">
-        <div class="user-post">
-          <%= image_tag User.find(post.user_id).gravatar_url, :class => "mini-avatar" %>
-          <span><em><%= User.find(post.user_id).username %></em></span><br/>
-          <span><b><%= post.title %></b></span><br>
-          <p><%= post.created_at %></p>
-          <p><%= post.content %></p>
+          <%= form_with model: @post, local: true do |form| %>
+          <%= form.hidden_field :user_id, :value => current_user.id %>
+          <%= form.hidden_field :game_id, :value => @game.id %>
+            <%= form.text_field :title, placeholder: "title", :class => "post-title" %><br />
+            <%= form.text_area :content, placeholder: "content", :class => "post-content" %><br/>
+            <br><small><em>Powered by Markdown</em></small> <br>
+            <%= form.submit "Post", :class => "submit" %>
+          <% end %>
         </div>
-        <%= form_with model: @comment, local: true do |form| %>
-        <%= form.hidden_field :user_id, :value => current_user.id %>
-        <%= form.hidden_field :post_id, :value => post.id %>
-          <%= form.text_field :content, placeholder: "add a comment...", :class => "post-content" %><br/>
-          <small><em>Powered by Markdown</em></small> <br>
-          <%= form.submit "Post", :class => "submit" %>
+      </div>
+      <div class="reverse-post">
+        <% if @posts.count == 0 %>
+        <p>There are no posts! Be the first to create a post about this game...</p>
+        <% elsif @posts.count != 0 %>
+
+      <% @posts.each do |post| %>
+      
+        <div class="user-posts">
+          <div class="user-post">
+            <%= image_tag User.find(post.user_id).gravatar_url, :class => "mini-avatar" %>
+            <span><em><%= User.find(post.user_id).username %></em></span><br/>
+            <span><b><%= post.title %></b></span><br>
+            <!-- <p><%= post.created_at %></p> -->
+            <p><%= @markdown.render(post.content).html_safe() %></p>
+          </div>
+          
+          <div class="post">
+            <%= form_with model: @comment, local: true do |form| %>
+            <%= form.hidden_field :user_id, :value => current_user.id %>
+            <%= form.hidden_field :post_id, :value => post.id %>
+            <%= form.text_area :content, placeholder: "add a comment...", :class => "post-content" %><br/>
+            <small><em>Powered by Markdown</em></small> <br>
+            <%= form.submit "Comment", :class => "submit" %>
+          </div>
+          
         <% end %>
-        <div class="reverse-post">
-      <% post.comments.each do |comment| %>
-      <%= image_tag User.find(comment.user_id).gravatar_url, :class => "mini-avatar" %>
-      <span><em><%= User.find(comment.user_id).username %></em></span>
-      <p><%= comment.content %></p>
-    <% end %>
-  </div>
+
+        <details>
+          <summary >Comments</summary>
+          <% post.comments.each do |comment| %>
+            <div class="">
+              <div class="posts">
+                <div class="post">
+                  
+                  <%= image_tag User.find(comment.user_id).gravatar_url, :class => "mini-avatar" %>
+                  <span><em><%= User.find(comment.user_id).username %></em></span>
+                  <p><%= @markdown.render(comment.content).html_safe() %></p>
+                  
+                </div>
+              </div>
+            <% end %>
+
+
+
+          </div>
+        </details>
+    
     </div>
     <% end %>
 
   </div>
   <% end %>
 
-    <details>
-      <summary >Show More</summary>
-      <p>coming soon<p>
-    </details>
+    
 
 
   </div>
