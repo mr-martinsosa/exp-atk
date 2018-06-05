@@ -1,7 +1,18 @@
 // Place all the styles related to the Games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.must-sign{
+  font-size: 140%;
+  color: #f2f2f2;
+  width: 15%;
+  margin-left: 42%;
+  text-decoration: none;
+  border-top: 5px solid #9A6EAA;
+  border-bottom: 5px solid #9A6EAA;
+}
+.must-sign:hover{
+  background-color: #9A6EAA;
+}
 .main-img {
   border: 10px solid #707070;
   border-radius: 5px;
